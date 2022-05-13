@@ -1,5 +1,4 @@
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap");
 html,
 body,
 p,
@@ -78,12 +77,4 @@ td,
 th {
   padding: 0;
 }
-
-p {
-  font-family: "Roboto", sans-serif;
-}
-
-.heading {
-  font-family: "Shrikhand", cursive;
-}
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=reset.css.map */
