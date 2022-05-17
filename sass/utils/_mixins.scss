@@ -3,3 +3,9 @@
   background-color: $colour-footer-background;
   text-decoration: none;
 }
+@mixin introduction_formating {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
