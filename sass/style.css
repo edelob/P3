@@ -1,5 +1,5 @@
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Shrikhand&display=swap");
 html,
 body,
 p,
@@ -81,12 +81,134 @@ th {
 
 p {
   font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 
 .heading {
   font-family: "Shrikhand", cursive;
 }
 
+/*****HEADER*****/
+.homepage .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem 1rem 0.5rem 1rem;
+}
+
+.homepage .logo img {
+  margin: auto;
+  width: 45%;
+}
+
+.introduction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #f5f4f4;
+}
+
+.introduction .introduction_location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #ece9e9;
+  -webkit-box-shadow: 0 0.2rem 0.2rem #bbb9b9 inset;
+          box-shadow: 0 0.2rem 0.2rem #bbb9b9 inset;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.introduction .introduction_location i {
+  padding: 0.1rem 1rem 0 0;
+  margin-left: auto;
+}
+
+.introduction .introduction_location p {
+  font-size: 1rem;
+  padding-left: 0.2rem;
+  margin-right: auto;
+}
+
+.introduction .introduction_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 0.8rem;
+}
+
+.introduction .introduction_title h1 {
+  margin: auto;
+}
+
+.introduction .introduction_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1.8rem;
+}
+
+.introduction .introduction_text p {
+  margin: auto;
+  color: #5f5d5d;
+}
+
+.introduction .introduction_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.introduction .introduction_btn .btn {
+  width: 65%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background-image: linear-gradient(180deg, #ff79da, #9356dc);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  padding: 0.9rem;
+  margin: auto;
+  border-radius: 1.4rem;
+  border: none;
+}
+
+/*****FOOTER*****/
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -96,7 +218,7 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 1.5rem;
-  background-color: #000;
+  background-color: #0a0a0a;
 }
 
 .footer :nth-child(3) i {
@@ -105,12 +227,14 @@ p {
 
 .footer h2 {
   color: #fff;
+  background-color: #0a0a0a;
   text-decoration: none;
   padding-bottom: 0.5rem;
 }
 
 .footer a {
   color: #fff;
+  background-color: #0a0a0a;
   text-decoration: none;
   margin-right: auto;
   padding: 0.2rem;

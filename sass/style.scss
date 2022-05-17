@@ -2,4 +2,74 @@
 @import "utils/variables";
 @import "utils/mixins";
 @import "base/fonts";
+
+/*****HEADER*****/
+.homepage {
+  .logo {
+    display: flex;
+    padding: 1rem 1rem 0.5rem 1rem;
+    img {
+      margin: auto;
+      width: 45%;
+    }
+  }
+}
+.introduction {
+  display: flex;
+  flex-direction: column;
+  background-color: $colour-grey;
+
+  .introduction_location {
+    display: flex;
+    justify-content: center;
+    background-color: $colour-grey-dark;
+    box-shadow: 0 0.2rem 0.2rem rgb(187, 185, 185) inset;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    i {
+      padding: 0.1rem 1rem 0 0;
+      margin-left: auto;
+    }
+    p {
+      font-size: 1rem;
+      padding-left: 0.2rem;
+      margin-right: auto;
+    }
+  }
+  .introduction_title {
+    @include introduction_formating(0.8rem);
+
+    h1 {
+      margin: auto;
+    }
+  }
+  .introduction_text {
+    @include introduction_formating(1.8rem);
+
+    p {
+      margin: auto;
+      color: rgb(95, 93, 93);
+    }
+  }
+  .introduction_btn {
+    @include introduction_formating(3rem);
+    .btn {
+      width: 65%;
+      background-image: linear-gradient(
+        180deg,
+        $colour-secondary,
+        $colour-primary
+      );
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      padding: 0.9rem;
+      margin: auto;
+      border-radius: 1.4rem;
+      border: none;
+    }
+  }
+}
+
+/*****FOOTER*****/
 @import "layouts/footer";
