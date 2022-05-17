@@ -14,6 +14,10 @@
     }
   }
 }
+/*****OHMYFOOD INTRODUCTION*****/
+* {
+  box-sizing: border-box;
+}
 .introduction {
   display: flex;
   flex-direction: column;
@@ -52,21 +56,79 @@
     }
   }
   .introduction_btn {
-    @include introduction_formating(3rem);
+    @include introduction_formating(3.5rem);
     .btn {
-      width: 65%;
+      width: 60%;
       background-image: linear-gradient(
         180deg,
         $colour-secondary,
         $colour-primary
       );
-      font-size: 1rem;
-      font-weight: 700;
+      font-size: 1.05rem;
+      font-weight: 600;
       color: #fff;
-      padding: 0.9rem;
+      padding: 1rem 0.7rem;
       margin: auto;
-      border-radius: 1.4rem;
+      border-radius: 1.5rem;
       border: none;
+      box-shadow: 0.2rem 0.2rem 0.5rem rgb(190, 189, 189);
+    }
+  }
+}
+/*****APP FUNCTIONS*****/
+.functions {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3.5rem;
+  h2 {
+    padding: 2rem 0 1rem 0.9rem;
+  }
+}
+.functions_instructions {
+  display: flex;
+  flex-direction: column;
+  .btn_instructions {
+    @include function_btn_instructions;
+    position: relative;
+    i {
+      color: rgb(100, 98, 98);
+      font-size: 1.2rem;
+    }
+
+    .btn_instructions_number {
+      position: absolute;
+      top: 30%;
+      left: -2%;
+      color: #fff;
+      padding: 0.5rem 0.7rem;
+      margin-right: 0.5rem;
+      border-radius: 50%;
+      font-size: 0.3rem;
+      background-color: $colour-primary;
+    }
+  }
+}
+/*****RESTAURANTS CHOICE*****/
+.restaurants {
+  background-color: $colour-grey;
+  h2 {
+    padding: 3rem 0 0.4rem 1.5rem;
+  }
+  .restaurants_select {
+    display: flex;
+    flex-direction: column;
+    a {
+      width: 90%;
+      margin: 1rem auto;
+      box-shadow: 0.2rem 0.2rem 0.6rem rgb(212, 211, 211);
+      border-radius: 2rem;
+
+      img {
+        object-fit: cover;
+        border-radius: 2rem 2rem 0 0;
+        width: 100%;
+        max-height: 12rem;
+      }
     }
   }
 }
