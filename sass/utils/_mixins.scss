@@ -3,9 +3,9 @@
   background-color: $colour-footer-background;
   text-decoration: none;
 }
-@mixin introduction_formating {
+@mixin introduction_formating($size: 1rem) {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: $size;
 }
