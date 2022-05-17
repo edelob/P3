@@ -1,4 +1,5 @@
 @mixin footer_links {
-  color: #fff;
+  color: $colour-footer-links;
+  background-color: $colour-footer-background;
   text-decoration: none;
 }
