@@ -1,16 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Shrikhand&display=swap");
+
+$font-primary: "Roboto", sans-serif;
+
 p {
-  font-family: "Roboto", sans-serif;
+  font-family: $font-primary;
   font-size: 1.2rem;
   font-weight: 100;
 }
 
 h1 {
-  font-family: "Roboto", sans-serif;
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+h2 {
+  font-family: $font-primary;
   font-weight: 700;
   font-size: 1.5rem;
 }
 
 .heading {
   font-family: "Shrikhand", cursive;
+  font-weight: 500;
+  font-size: 1.2rem;
 }
