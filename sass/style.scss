@@ -56,7 +56,7 @@
     }
   }
   .introduction_btn {
-    @include introduction_formating(3.5rem);
+    @include introduction_formating(3.9rem);
     .btn {
       width: 60%;
       background-image: linear-gradient(
@@ -64,10 +64,10 @@
         $colour-secondary,
         $colour-primary
       );
-      font-size: 1.05rem;
-      font-weight: 600;
+      font-size: .85rem;
+      font-weight: 550;
       color: #fff;
-      padding: 1rem 0.7rem;
+      padding: 1.1rem 0rem;
       margin: auto;
       border-radius: 1.5rem;
       border: none;
@@ -81,7 +81,7 @@
   flex-direction: column;
   padding-bottom: 3.5rem;
   h2 {
-    padding: 2rem 0 1rem 0.9rem;
+    padding: 3rem 0 1rem 0.9rem;
   }
 }
 .functions_instructions {
@@ -103,7 +103,7 @@
       padding: 0.5rem 0.7rem;
       margin-right: 0.5rem;
       border-radius: 50%;
-      font-size: 0.3rem;
+      font-size: 0.5rem;
       background-color: $colour-primary;
     }
   }
@@ -121,13 +121,53 @@
       width: 90%;
       margin: 1rem auto;
       box-shadow: 0.2rem 0.2rem 0.6rem rgb(212, 211, 211);
-      border-radius: 2rem;
+      border-radius: 1.1rem;
+      text-decoration: none;
 
       img {
         object-fit: cover;
-        border-radius: 2rem 2rem 0 0;
+        border-radius: 1.1rem 1.1rem 0 0;
         width: 100%;
-        max-height: 12rem;
+        max-height: 11rem;
+      }
+      
+      .restaurants_card{
+        position: relative;
+        
+      }
+      .restaurants_card_new{
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        background-color: $colour-tertiary;
+        color:rgb(67, 104, 62);
+        padding: .5rem;
+       
+      }
+      .restaurant_card_text{
+        position: relative;
+        min-height: 20rem;  
+      }
+      h3{
+        color: #000;
+        font-family: $font-primary;
+        font-size: 1.1rem;
+        font-weight: 600;
+        padding: .8rem 0 0 .8rem;
+
+
+      }
+      p{
+        color:#000;
+        padding: .2rem 0 .8rem .8rem;
+        font-family: $font-primary;
+        font-weight: 200;
+      }
+      i{
+        position: absolute;
+        right: 5%;
+        bottom: 12%;
+        font-size: 1.4rem;
       }
     }
   }
