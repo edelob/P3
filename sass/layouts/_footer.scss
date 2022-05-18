@@ -1,10 +1,11 @@
 .footer {
   display: flex;
   flex-direction: column;
+  margin-top: 3rem;
   padding: 1.5rem;
   background-color: $colour-footer-background;
   :nth-child(3) i {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
   h2 {
     @include footer_links;
