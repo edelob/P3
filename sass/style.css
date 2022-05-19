@@ -1,5 +1,5 @@
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 html,
 body,
 p,
@@ -81,8 +81,8 @@ th {
 
 p {
   font-family: "Roboto", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 100;
+  font-size: 1.1rem;
+  font-weight: 400;
 }
 
 h1 {
@@ -140,7 +140,7 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #f1eaea;
+  background-color: #ece7e7;
   -webkit-box-shadow: 0 0.2rem 0.2rem #bbb9b9 inset;
           box-shadow: 0 0.2rem 0.2rem #bbb9b9 inset;
   padding: 1rem 0;
@@ -155,6 +155,7 @@ h2 {
 .introduction .introduction_location p {
   font-size: 1rem;
   padding-left: 0.2rem;
+  text-align: center;
   margin-right: auto;
 }
 
@@ -211,17 +212,17 @@ h2 {
 
 .introduction .introduction_btn .btn {
   width: 60%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-  background-image: linear-gradient(180deg, #ff79da, #9356dc);
-  font-size: .85rem;
-  font-weight: 550;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
+  background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
+  font-size: .90rem;
+  font-weight: 500;
   color: #fff;
   padding: 1.1rem 0rem;
   margin: auto;
-  border-radius: 1.5rem;
+  border-radius: 1.7rem;
   border: none;
-  -webkit-box-shadow: 0.2rem 0.2rem 0.5rem #bebdbd;
-          box-shadow: 0.2rem 0.2rem 0.5rem #bebdbd;
+  -webkit-box-shadow: 0.2rem 0.3rem 0.8rem #bebdbd;
+          box-shadow: 0.2rem 0.3rem 0.8rem #bebdbd;
 }
 
 /*****APP FUNCTIONS*****/
@@ -257,6 +258,7 @@ h2 {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  background-color: #f8f6f6;
   margin: 1rem auto;
   padding: 1.6rem 1.6rem 1.6rem 0;
   width: 85%;
@@ -266,7 +268,7 @@ h2 {
           box-shadow: 0.2rem 0.2rem 0.6rem #d4d3d3;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  font-weight: 530;
+  font-weight: 500;
   position: relative;
 }
 
@@ -275,25 +277,31 @@ h2 {
   font-size: 1.2rem;
 }
 
+.functions_instructions .btn_instructions .mobile-icon {
+  font-size: 1.3rem;
+  padding: 0 1.2rem;
+}
+
 .functions_instructions .btn_instructions .btn_instructions_number {
   position: absolute;
   top: 30%;
   left: -2%;
   color: #fff;
-  padding: 0.5rem 0.7rem;
+  padding: 0.4rem 0.5rem;
   margin-right: 0.5rem;
   border-radius: 50%;
-  font-size: 0.5rem;
+  font-size: 0.6rem;
   background-color: #9356dc;
 }
 
 /*****RESTAURANTS CHOICE*****/
 .restaurants {
   background-color: #f8f6f6;
+  padding-bottom: 3.5rem;
 }
 
 .restaurants h2 {
-  padding: 3rem 0 0.4rem 1.5rem;
+  padding: 3.5rem 0 0.8rem 1.5rem;
 }
 
 .restaurants .restaurants_select {
@@ -308,7 +316,7 @@ h2 {
 
 .restaurants .restaurants_select a {
   width: 90%;
-  margin: 1rem auto;
+  margin: .6rem auto;
   -webkit-box-shadow: 0.2rem 0.2rem 0.6rem #d4d3d3;
           box-shadow: 0.2rem 0.2rem 0.6rem #d4d3d3;
   border-radius: 1.1rem;
@@ -332,8 +340,9 @@ h2 {
   top: 5%;
   right: 5%;
   background-color: #99e2d0;
-  color: #43683e;
-  padding: .5rem;
+  color: #2c5e24;
+  font-size: .8rem;
+  padding: .4rem .8rem;
 }
 
 .restaurants .restaurants_select a .restaurant_card_text {
@@ -353,7 +362,7 @@ h2 {
   color: #000;
   padding: .2rem 0 .8rem .8rem;
   font-family: "Roboto", sans-serif;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 .restaurants .restaurants_select a i {
@@ -361,6 +370,7 @@ h2 {
   right: 5%;
   bottom: 12%;
   font-size: 1.4rem;
+  color: #000;
 }
 
 /*****FOOTER*****/
@@ -372,7 +382,6 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 3rem;
   padding: 1.5rem;
   background-color: #0a0a0a;
 }
@@ -397,6 +406,6 @@ h2 {
 }
 
 .footer i {
-  padding-right: 0.3rem;
+  padding-right: 0.5rem;
 }
 /*# sourceMappingURL=style.css.map */
