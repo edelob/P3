@@ -1,1 +1,286 @@
-/* No CSS *//*# sourceMappingURL=menu.css.map */
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+.heading {
+  font-family: "Shrikhand", cursive;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/*****HEADER*****/
+.menu_header .menu_logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: baseline;
+      -ms-flex-pack: baseline;
+          justify-content: baseline;
+  padding: 1rem 1rem 0.5rem 1rem;
+}
+
+.menu_header .menu_logo a {
+  color: #000;
+  font-size: 1.1rem;
+  padding-top: .2rem;
+}
+
+.menu_header .menu_logo img {
+  margin: auto;
+  width: 45%;
+}
+
+.restaurant_img {
+  position: relative;
+}
+
+.restaurant_menu {
+  background-color: #ece7e7;
+  border-radius: 1.4rem 1.4rem 0 0;
+  padding: 1.4rem 1rem 3.5rem 1rem;
+  width: 100%;
+}
+
+.restaurant_menu .restaurant_heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.restaurant_menu .restaurant_heading h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding-bottom: 1srem;
+  margin-right: auto;
+}
+
+.restaurant_menu .restaurant_heading i {
+  margin: .2rem auto;
+  font-weight: 100;
+  font-size: 1.4rem;
+}
+
+.restaurant_menu .menu_part {
+  width: 100%;
+}
+
+.restaurant_menu .menu_part h2 {
+  text-transform: uppercase;
+  font-size: .9rem;
+  font-weight: 400;
+  margin-top: 1.5rem;
+}
+
+.restaurant_menu .menu_part hr {
+  width: 2rem;
+  height: .05rem;
+  color: #065e06;
+  border: 0.1rem solid #99e2d0;
+  margin: .2rem 0;
+}
+
+.restaurant_menu .menu_part p {
+  font-size: .7rem;
+}
+
+.restaurant_menu .menu_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #fff;
+  margin: .7rem 0;
+  border-radius: .5rem;
+  padding: .5rem;
+}
+
+.restaurant_menu .menu_item .menu_text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.restaurant_menu .menu_item .menu_text h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  font-size: .9rem;
+  font-weight: 500;
+  padding: .3rem 0;
+}
+
+.restaurant_menu .menu_item .menu_text p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  font-size: .8rem;
+}
+
+.restaurant_menu .menu_item .menu_item_price {
+  padding: 1rem 0 0 0;
+  font-weight: 400;
+}
+
+.restaurant_menu .order_btn {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.restaurant_menu .order_btn .button {
+  width: 65%;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
+  background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
+  font-size: .7rem;
+  font-weight: 500;
+  color: #fff;
+  padding: .8rem 0rem;
+  margin: auto;
+  border-radius: 1.7rem;
+  border: none;
+  -webkit-box-shadow: 0.2rem 0.3rem 0.8rem #bebdbd;
+          box-shadow: 0.2rem 0.3rem 0.8rem #bebdbd;
+}
+
+/*****FOOTER*****/
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem 1rem 1.5rem;
+  background-color: #0a0a0a;
+}
+
+.footer :nth-child(3) i {
+  font-size: 0.6rem;
+}
+
+.footer h2 {
+  color: #fff;
+  background-color: #0a0a0a;
+  text-decoration: none;
+  padding-bottom: 0.4rem;
+}
+
+.footer a {
+  color: #fff;
+  background-color: #0a0a0a;
+  text-decoration: none;
+  font-size: .8rem;
+  margin-right: auto;
+  padding: 0.2rem;
+}
+
+.footer i {
+  padding-right: 0.5rem;
+}
+/*# sourceMappingURL=menu.css.map */
