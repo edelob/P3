@@ -3,23 +3,58 @@
   background-color: $colour-footer-background;
   text-decoration: none;
 }
+
 @mixin introduction_formating($size: 1rem) {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-bottom: $size;
 }
+
+@mixin btn-purple {
+  width: 65%;
+  background-image: linear-gradient(to bottom right,
+      $colour-secondary,
+      $colour-primary);
+  font-size: .7rem;
+  font-weight: 500;
+  color: #fff;
+  padding: .8rem 0rem;
+  margin: auto;
+  border-radius: 1.7rem;
+  border: none;
+  box-shadow: 0.2rem 0.3rem 0.8rem rgb(190, 189, 189);
+
+}
+
 @mixin function_btn_instructions {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   background-color: $colour-grey;
-  margin: 1rem auto;
-  padding: 1.6rem 1.6rem 1.6rem 0;
+  margin: .6rem auto;
+  padding: 1.4rem 1.6rem 1rem 0;
   width: 85%;
   border: none;
   border-radius: 1.2rem;
   box-shadow: 0.2rem 0.2rem 0.6rem rgb(212, 211, 211);
   font-family: $font-primary;
-  font-size: 1rem;
+  font-size: .8rem;
   font-weight: 500;
+}
+
+@mixin hr-green {
+  width: 2rem;
+  height: .05rem;
+  color: rgb(6, 94, 6);
+  border: .1rem solid $colour-tertiary;
+  margin: .2rem 0;
+}
+
+@mixin text_ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+
 }
