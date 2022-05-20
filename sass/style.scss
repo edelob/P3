@@ -3,21 +3,27 @@
 @import "utils/mixins";
 @import "base/fonts";
 
+* {
+  box-sizing: border-box;
+}
+
 /*****HEADER*****/
+
 .homepage {
   .logo {
     display: flex;
     padding: 1rem 1rem 0.5rem 1rem;
+
     img {
       margin: auto;
-      width: 45%;
+      width: 50%;
     }
   }
 }
+
 /*****OHMYFOOD INTRODUCTION*****/
-* {
-  box-sizing: border-box;
-}
+
+
 .introduction {
   display: flex;
   flex-direction: column;
@@ -28,78 +34,80 @@
     justify-content: center;
     background-color: $colour-grey-dark;
     box-shadow: 0 0.2rem 0.2rem rgb(187, 185, 185) inset;
-    padding: 1rem 0;
-    margin-bottom: 2rem;
+    padding: .8rem 0;
+    margin-bottom: 1.8rem;
+
     i {
-      padding: 0.1rem 1rem 0 0;
+      padding: 0rem 1rem 0 0;
       margin-left: auto;
     }
+
     p {
-      font-size: 1rem;
+      font-size: .8rem;
       padding-left: 0.2rem;
       text-align: center;
       margin-right: auto;
     }
   }
+
   .introduction_title {
     @include introduction_formating(0.8rem);
 
     h1 {
       margin: auto;
+      font-size: 1.15rem;
     }
   }
+
   .introduction_text {
     @include introduction_formating(1.8rem);
 
     p {
-      margin: auto; 
+      margin: auto;
+      font-size: .9rem;
       color: rgb(95, 93, 93);
     }
   }
-  
+
   .introduction_btn {
-    @include introduction_formating(3.9rem);
+    @include introduction_formating(2.8rem);
+
     .btn {
-      width: 60%;
-      background-image: linear-gradient(
-        to bottom right,
-        $colour-secondary ,
-        $colour-primary
-      );
-      font-size: .90rem;
-      font-weight: 500;
-      color: #fff;
-      padding: 1.1rem 0rem;
-      margin: auto;
-      border-radius: 1.7rem;
-      border: none;
-      box-shadow: 0.2rem 0.3rem 0.8rem rgb(190, 189, 189);
+      @include btn-purple;
     }
   }
 }
+
 /*****APP FUNCTIONS*****/
 .functions {
   display: flex;
   flex-direction: column;
-  padding-bottom: 3.5rem;
+  padding-bottom: 3rem;
+
   h2 {
-    padding: 3rem 0 1rem 0.9rem;
+    font-size: 1.3rem;
+    padding: 2.2rem 0 .7rem 0.9rem;
   }
 }
+
 .functions_instructions {
   display: flex;
   flex-direction: column;
+
   .btn_instructions {
     @include function_btn_instructions;
     position: relative;
+
     i {
       color: rgb(100, 98, 98);
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
+
     .mobile-icon {
       font-size: 1.3rem;
-      padding: 0 1.2rem ;
+      padding: 0 1rem;
     }
+
     .btn_instructions_number {
       position: absolute;
       top: 30%;
@@ -113,19 +121,24 @@
     }
   }
 }
+
 /*****RESTAURANTS CHOICE*****/
 .restaurants {
   background-color: $colour-grey;
-  padding-bottom: 3.5rem;
+  padding-bottom: 2.5rem;
+
   h2 {
-    padding: 3.5rem 0 0.8rem 1.5rem;
+    font-size: 1.3rem;
+    padding: 2.6rem 0 0.5rem 1.5rem;
   }
+
   .restaurants_select {
     display: flex;
     flex-direction: column;
+
     a {
       width: 90%;
-      margin: .6rem auto;
+      margin: .5rem auto;
       box-shadow: 0.2rem 0.2rem 0.6rem rgb(212, 211, 211);
       border-radius: 1.1rem;
       text-decoration: none;
@@ -134,43 +147,49 @@
         object-fit: cover;
         border-radius: 1.1rem 1.1rem 0 0;
         width: 100%;
-        max-height: 11rem;
+        max-height: 8.7rem;
       }
-      
-      .restaurants_card{
+
+      .restaurants_card {
         position: relative;
-        
+
       }
-      .restaurants_card_new{
+
+      .restaurants_card_new {
         position: absolute;
         top: 5%;
         right: 5%;
         background-color: $colour-tertiary;
-        color:rgb(44, 94, 36);
-        font-size: .8rem;
+        color: rgb(44, 94, 36);
+        font-size: .7rem;
         padding: .4rem .8rem;
-       
+
       }
-      .restaurant_card_text{
+
+      .restaurant_card_text {
         position: relative;
-        min-height: 20rem;  
+        min-height: 20rem;
       }
-      h3{
+
+      h3 {
         color: #000;
         font-family: $font-primary;
-        font-size: 1.1rem;
+        font-size: 1rem;
         font-weight: 600;
-        padding: .8rem 0 0 .8rem;
+        padding: .5rem 0 0 .8rem;
 
 
       }
-      p{
-        color:#000;
+
+      p {
+        color: #000;
         padding: .2rem 0 .8rem .8rem;
         font-family: $font-primary;
+        font-size: .8rem;
         font-weight: 300;
       }
-      i{
+
+      i {
         position: absolute;
         right: 5%;
         bottom: 12%;

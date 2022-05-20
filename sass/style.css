@@ -81,26 +81,36 @@ th {
 
 p {
   font-family: "Roboto", sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 
 h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 h2 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1rem;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
 }
 
 .heading {
   font-family: "Shrikhand", cursive;
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1rem;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /*****HEADER*****/
@@ -113,15 +123,10 @@ h2 {
 
 .homepage .logo img {
   margin: auto;
-  width: 45%;
+  width: 50%;
 }
 
 /*****OHMYFOOD INTRODUCTION*****/
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 .introduction {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -143,17 +148,17 @@ h2 {
   background-color: #ece7e7;
   -webkit-box-shadow: 0 0.2rem 0.2rem #bbb9b9 inset;
           box-shadow: 0 0.2rem 0.2rem #bbb9b9 inset;
-  padding: 1rem 0;
-  margin-bottom: 2rem;
+  padding: .8rem 0;
+  margin-bottom: 1.8rem;
 }
 
 .introduction .introduction_location i {
-  padding: 0.1rem 1rem 0 0;
+  padding: 0rem 1rem 0 0;
   margin-left: auto;
 }
 
 .introduction .introduction_location p {
-  font-size: 1rem;
+  font-size: .8rem;
   padding-left: 0.2rem;
   text-align: center;
   margin-right: auto;
@@ -175,6 +180,7 @@ h2 {
 
 .introduction .introduction_title h1 {
   margin: auto;
+  font-size: 1.15rem;
 }
 
 .introduction .introduction_text {
@@ -193,6 +199,7 @@ h2 {
 
 .introduction .introduction_text p {
   margin: auto;
+  font-size: .9rem;
   color: #5f5d5d;
 }
 
@@ -207,17 +214,17 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 3.9rem;
+  margin-bottom: 2.8rem;
 }
 
 .introduction .introduction_btn .btn {
-  width: 60%;
+  width: 65%;
   background-image: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
-  font-size: .90rem;
+  font-size: .7rem;
   font-weight: 500;
   color: #fff;
-  padding: 1.1rem 0rem;
+  padding: .8rem 0rem;
   margin: auto;
   border-radius: 1.7rem;
   border: none;
@@ -234,11 +241,12 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-bottom: 3.5rem;
+  padding-bottom: 3rem;
 }
 
 .functions h2 {
-  padding: 3rem 0 1rem 0.9rem;
+  font-size: 1.3rem;
+  padding: 2.2rem 0 .7rem 0.9rem;
 }
 
 .functions_instructions {
@@ -258,28 +266,31 @@ h2 {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #f8f6f6;
-  margin: 1rem auto;
-  padding: 1.6rem 1.6rem 1.6rem 0;
+  margin: .6rem auto;
+  padding: 1.4rem 1.6rem 1rem 0;
   width: 85%;
   border: none;
   border-radius: 1.2rem;
   -webkit-box-shadow: 0.2rem 0.2rem 0.6rem #d4d3d3;
           box-shadow: 0.2rem 0.2rem 0.6rem #d4d3d3;
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
+  font-size: .8rem;
   font-weight: 500;
   position: relative;
 }
 
 .functions_instructions .btn_instructions i {
   color: #646262;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .functions_instructions .btn_instructions .mobile-icon {
   font-size: 1.3rem;
-  padding: 0 1.2rem;
+  padding: 0 1rem;
 }
 
 .functions_instructions .btn_instructions .btn_instructions_number {
@@ -297,11 +308,12 @@ h2 {
 /*****RESTAURANTS CHOICE*****/
 .restaurants {
   background-color: #f8f6f6;
-  padding-bottom: 3.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .restaurants h2 {
-  padding: 3.5rem 0 0.8rem 1.5rem;
+  font-size: 1.3rem;
+  padding: 2.6rem 0 0.5rem 1.5rem;
 }
 
 .restaurants .restaurants_select {
@@ -316,7 +328,7 @@ h2 {
 
 .restaurants .restaurants_select a {
   width: 90%;
-  margin: .6rem auto;
+  margin: .5rem auto;
   -webkit-box-shadow: 0.2rem 0.2rem 0.6rem #d4d3d3;
           box-shadow: 0.2rem 0.2rem 0.6rem #d4d3d3;
   border-radius: 1.1rem;
@@ -328,7 +340,7 @@ h2 {
      object-fit: cover;
   border-radius: 1.1rem 1.1rem 0 0;
   width: 100%;
-  max-height: 11rem;
+  max-height: 8.7rem;
 }
 
 .restaurants .restaurants_select a .restaurants_card {
@@ -341,7 +353,7 @@ h2 {
   right: 5%;
   background-color: #99e2d0;
   color: #2c5e24;
-  font-size: .8rem;
+  font-size: .7rem;
   padding: .4rem .8rem;
 }
 
@@ -353,15 +365,16 @@ h2 {
 .restaurants .restaurants_select a h3 {
   color: #000;
   font-family: "Roboto", sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
-  padding: .8rem 0 0 .8rem;
+  padding: .5rem 0 0 .8rem;
 }
 
 .restaurants .restaurants_select a p {
   color: #000;
   padding: .2rem 0 .8rem .8rem;
   font-family: "Roboto", sans-serif;
+  font-size: .8rem;
   font-weight: 300;
 }
 
@@ -382,25 +395,26 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 1.5rem;
+  padding: 1rem 1rem 1.5rem;
   background-color: #0a0a0a;
 }
 
 .footer :nth-child(3) i {
-  font-size: 0.7rem;
+  font-size: 0.6rem;
 }
 
 .footer h2 {
   color: #fff;
   background-color: #0a0a0a;
   text-decoration: none;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.4rem;
 }
 
 .footer a {
   color: #fff;
   background-color: #0a0a0a;
   text-decoration: none;
+  font-size: .8rem;
   margin-right: auto;
   padding: 0.2rem;
 }
