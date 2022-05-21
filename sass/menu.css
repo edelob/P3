@@ -130,15 +130,21 @@ h3 {
   width: 45%;
 }
 
-.restaurant_img {
-  position: relative;
+.restaurant_img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1;
+  position: absolute;
 }
 
 .restaurant_menu {
-  background-color: #ece7e7;
+  background-color: #f0ecec;
   border-radius: 1.4rem 1.4rem 0 0;
-  padding: 1.4rem 1rem 3.5rem 1rem;
+  padding: 1.4rem 1rem 3rem 1rem;
   width: 100%;
+  z-index: 2;
+  position: relative;
+  top: 10rem;
 }
 
 .restaurant_menu .restaurant_heading {
@@ -149,16 +155,15 @@ h3 {
 
 .restaurant_menu .restaurant_heading h1 {
   font-family: "Shrikhand", cursive;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 500;
-  padding-bottom: 1srem;
   margin-right: auto;
 }
 
 .restaurant_menu .restaurant_heading i {
-  margin: .2rem auto;
+  margin: .2rem;
   font-weight: 100;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .restaurant_menu .menu_part {
@@ -193,8 +198,10 @@ h3 {
           justify-content: space-between;
   background-color: #fff;
   margin: .7rem 0;
-  border-radius: .5rem;
+  border-radius: .6rem;
   padding: .5rem;
+  -webkit-box-shadow: 0.3rem 0.2rem 0.5rem #d4d3d3;
+          box-shadow: 0.3rem 0.2rem 0.5rem #d4d3d3;
 }
 
 .restaurant_menu .menu_item .menu_text {
@@ -211,7 +218,7 @@ h3 {
   max-width: 100%;
   font-size: .9rem;
   font-weight: 500;
-  padding: .3rem 0;
+  padding: .1rem 0;
 }
 
 .restaurant_menu .menu_item .menu_text p {
@@ -220,16 +227,17 @@ h3 {
   text-overflow: ellipsis;
   max-width: 100%;
   font-size: .8rem;
+  font-weight: 300;
 }
 
 .restaurant_menu .menu_item .menu_item_price {
-  padding: 1rem 0 0 0;
+  padding: 1.2rem 0 0 0;
   font-weight: 400;
 }
 
 .restaurant_menu .order_btn {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 2.3rem;
 }
 
 .restaurant_menu .order_btn .button {
@@ -237,7 +245,7 @@ h3 {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
   font-size: .7rem;
-  font-weight: 500;
+  font-weight: 600;
   color: #fff;
   padding: .8rem 0rem;
   margin: auto;
@@ -245,6 +253,8 @@ h3 {
   border: none;
   -webkit-box-shadow: 0.2rem 0.3rem 0.8rem #bebdbd;
           box-shadow: 0.2rem 0.3rem 0.8rem #bebdbd;
+  width: 55%;
+  font-size: .8rem;
 }
 
 /*****FOOTER*****/
@@ -282,5 +292,11 @@ h3 {
 
 .footer i {
   padding-right: 0.5rem;
+}
+
+.footer {
+  position: relative;
+  z-index: 2;
+  top: 10rem;
 }
 /*# sourceMappingURL=menu.css.map */

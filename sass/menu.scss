@@ -26,30 +26,38 @@ body {}
 }
 
 .restaurant_img {
-    position: relative;
+    img {
+        object-fit: cover;
+        z-index: 1;
+        position: absolute;
+    }
 }
 
 .restaurant_menu {
     background-color: $colour-grey-dark;
     border-radius: 1.4rem 1.4rem 0 0;
-    padding: 1.4rem 1rem 3.5rem 1rem;
+    padding: 1.4rem 1rem 3rem 1rem;
     width: 100%;
+    z-index: 2;
+    position: relative;
+    top: 10rem;
+
+
 
     .restaurant_heading {
         display: flex;
 
         h1 {
             font-family: $font-heading;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             font-weight: 500;
-            padding-bottom: 1srem;
             margin-right: auto;
         }
 
         i {
-            margin: .2rem auto;
+            margin: .2rem;
             font-weight: 100;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
     }
 
@@ -77,8 +85,9 @@ body {}
         justify-content: space-between;
         background-color: #fff;
         margin: .7rem 0;
-        border-radius: .5rem;
+        border-radius: .6rem;
         padding: .5rem;
+        box-shadow: .3rem .2rem .5rem rgb(212, 211, 211);
 
 
         .menu_text {
@@ -88,27 +97,30 @@ body {}
                 @include text_ellipsis;
                 font-size: .9rem;
                 font-weight: 500;
-                padding: .3rem 0;
+                padding: .1rem 0;
             }
 
             p {
                 @include text_ellipsis;
                 font-size: .8rem;
+                font-weight: 300;
             }
         }
 
         .menu_item_price {
-            padding: 1rem 0 0 0;
+            padding: 1.2rem 0 0 0;
             font-weight: 400
         }
     }
 
     .order_btn {
         text-align: center;
-        margin-top: 2rem;
+        margin-top: 2.3rem;
 
         .button {
             @include btn-purple;
+            width: 55%;
+            font-size: .8rem;
         }
     }
 
@@ -121,3 +133,9 @@ body {}
 /*****FOOTER*****/
 
 @import "layouts/footer";
+
+.footer {
+    position: relative;
+    z-index: 2;
+    top: 10rem;
+}
