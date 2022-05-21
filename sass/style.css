@@ -145,7 +145,7 @@ h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #ece7e7;
+  background-color: #f0ecec;
   -webkit-box-shadow: 0 0.2rem 0.2rem #bbb9b9 inset;
           box-shadow: 0 0.2rem 0.2rem #bbb9b9 inset;
   padding: .8rem 0;
@@ -194,7 +194,7 @@ h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.5rem;
 }
 
 .introduction .introduction_text p {
@@ -222,7 +222,7 @@ h3 {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
   font-size: .7rem;
-  font-weight: 500;
+  font-weight: 600;
   color: #fff;
   padding: .8rem 0rem;
   margin: auto;
@@ -245,7 +245,7 @@ h3 {
 }
 
 .functions h2 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   padding: 2.2rem 0 .7rem 0.9rem;
 }
 
@@ -298,10 +298,10 @@ h3 {
   top: 30%;
   left: -2%;
   color: #fff;
-  padding: 0.4rem 0.5rem;
+  padding: 0.3rem 0.5rem;
   margin-right: 0.5rem;
   border-radius: 50%;
-  font-size: 0.6rem;
+  font-size: 0.5rem;
   background-color: #9356dc;
 }
 
@@ -353,8 +353,9 @@ h3 {
   right: 5%;
   background-color: #99e2d0;
   color: #2c5e24;
-  font-size: .7rem;
-  padding: .4rem .8rem;
+  font-size: .8rem;
+  font-weight: 600;
+  padding: .2rem .7rem;
 }
 
 .restaurants .restaurants_select a .restaurant_card_text {
