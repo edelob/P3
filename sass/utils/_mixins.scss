@@ -45,9 +45,9 @@
 
 @mixin hr-green {
   width: 2rem;
-  height: .05rem;
   color: rgb(6, 94, 6);
-  border: .1rem solid $colour-tertiary;
+  border-style: inset;
+  border: 1px solid $colour-tertiary;
   margin: .2rem 0;
 }
 
