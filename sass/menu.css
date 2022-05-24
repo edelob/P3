@@ -133,18 +133,19 @@ h3 {
 .restaurant_img img {
   -o-object-fit: cover;
      object-fit: cover;
+  min-height: 100px;
   z-index: 1;
   position: absolute;
 }
 
 .restaurant_menu {
   background-color: #f0ecec;
-  border-radius: 1.4rem 1.4rem 0 0;
+  border-radius: 1.8rem 1.8rem 0 0;
   padding: 1.4rem 1rem 3rem 1rem;
   width: 100%;
   z-index: 2;
   position: relative;
-  top: 10rem;
+  top: 180px;
 }
 
 .restaurant_menu .restaurant_heading {
@@ -155,7 +156,7 @@ h3 {
 
 .restaurant_menu .restaurant_heading h1 {
   font-family: "Shrikhand", cursive;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 500;
   margin-right: auto;
 }
@@ -179,14 +180,15 @@ h3 {
 
 .restaurant_menu .menu_part hr {
   width: 2rem;
-  height: .05rem;
   color: #065e06;
-  border: 0.1rem solid #99e2d0;
+  border-style: inset;
+  border: 1px solid #99e2d0;
   margin: .2rem 0;
 }
 
 .restaurant_menu .menu_part p {
   font-size: .7rem;
+  font-weight: 900;
 }
 
 .restaurant_menu .menu_item {
@@ -226,7 +228,7 @@ h3 {
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
-  font-size: .8rem;
+  font-size: .7rem;
   font-weight: 300;
 }
 
@@ -297,6 +299,48 @@ h3 {
 .footer {
   position: relative;
   z-index: 2;
-  top: 10rem;
+  top: 180px;
+}
+
+/*****BREAKPOINTS***/
+/*****TABLETS*****/
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 1.1rem;
+  }
+  .restaurant_menu {
+    top: 300px;
+  }
+  .restaurant_img img {
+    height: 18rem;
+    width: 100%;
+  }
+  .restaurant_menu .menu_part {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .restaurant_menu .menu_part h2,
+  .restaurant_menu .menu_part hr {
+    width: 100%;
+  }
+  .restaurant_menu .menu_item {
+    min-width: 46%;
+    margin: .3rem;
+  }
+  .footer {
+    top: 300px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  html {
+    font-size: 1.4rem;
+  }
 }
 /*# sourceMappingURL=menu.css.map */

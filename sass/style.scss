@@ -7,6 +7,8 @@
   box-sizing: border-box;
 }
 
+
+
 /*****HEADER*****/
 
 .homepage {
@@ -203,3 +205,36 @@
 
 /*****FOOTER*****/
 @import "layouts/footer";
+
+
+/*****BREAKPOINTS*****/
+/*****TABLETS*****/
+@media only screen and (min-width: 768px) {
+
+  body {
+    font-size: 2rem;
+  }
+
+  .functions_instructions {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+
+    .btn_instructions {
+      width: 45%;
+    }
+  }
+
+
+  .restaurants {
+    .restaurants_select {
+      flex-direction: row;
+      flex-wrap: wrap;
+
+
+      a {
+        width: 45%;
+      }
+    }
+  }
+}

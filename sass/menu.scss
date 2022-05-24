@@ -4,7 +4,7 @@
 @import "base/fonts";
 
 /*****HEADER*****/
-body {}
+
 
 .menu_header {
     .menu_logo {
@@ -28,6 +28,7 @@ body {}
 .restaurant_img {
     img {
         object-fit: cover;
+        min-height: 100px;
         z-index: 1;
         position: absolute;
     }
@@ -35,12 +36,12 @@ body {}
 
 .restaurant_menu {
     background-color: $colour-grey-dark;
-    border-radius: 1.4rem 1.4rem 0 0;
+    border-radius: 1.8rem 1.8rem 0 0;
     padding: 1.4rem 1rem 3rem 1rem;
     width: 100%;
     z-index: 2;
     position: relative;
-    top: 10rem;
+    top: 180px;
 
 
 
@@ -49,7 +50,7 @@ body {}
 
         h1 {
             font-family: $font-heading;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: 500;
             margin-right: auto;
         }
@@ -73,11 +74,14 @@ body {}
 
         hr {
             @include hr-green;
+
         }
 
         p {
             font-size: .7rem;
+            font-weight: 900;
         }
+
     }
 
     .menu_item {
@@ -102,7 +106,7 @@ body {}
 
             p {
                 @include text_ellipsis;
-                font-size: .8rem;
+                font-size: .7rem;
                 font-weight: 300;
             }
         }
@@ -137,5 +141,53 @@ body {}
 .footer {
     position: relative;
     z-index: 2;
-    top: 10rem;
+    top: 180px;
+}
+
+/*****BREAKPOINTS***/
+/*****TABLETS*****/
+
+
+@media only screen and (min-width: 768px) {
+    html {
+        font-size: 1.1rem;
+    }
+
+    .restaurant_menu {
+        top: 300px;
+    }
+
+    .restaurant_img img {
+        height: 18rem;
+        width: 100%;
+    }
+
+    .restaurant_menu {
+        .menu_part {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            h2,
+            hr {
+                width: 100%;
+            }
+        }
+
+        .menu_item {
+            min-width: 46%;
+            margin: .3rem;
+        }
+
+    }
+
+    .footer {
+        top: 300px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    html {
+        font-size: 1.4rem;
+    }
 }
