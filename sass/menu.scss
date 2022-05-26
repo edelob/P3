@@ -3,9 +3,20 @@
 @import "utils/mixins";
 @import "base/fonts";
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    max-width: 1440px;
+
+    img {
+        max-width: 1440px;
+    }
+}
+
 /*****HEADER*****/
-
-
 .menu_header {
     .menu_logo {
         display: flex;
@@ -47,18 +58,41 @@
 
     .restaurant_heading {
         display: flex;
+        position: relative;
 
-        h1 {
-            font-family: $font-heading;
-            font-size: 1.3rem;
-            font-weight: 500;
-            margin-right: auto;
+        i:last-of-type {
+            position: absolute;
+            top: 21%;
+            right: 1.7%;
+            opacity: 0;
+            transform: scale(1);
+            transition: all 350ms ease-in;
+
+            &:hover {
+                opacity: 1;
+                transform: scale(1.7);
+                color: $colour-primary;
+            }
         }
+    }
 
-        i {
-            margin: .2rem;
-            font-weight: 100;
-            font-size: 1.2rem;
+    h1 {
+        font-family: $font-heading;
+        font-size: 1.3rem;
+        font-weight: 500;
+        margin-right: auto;
+    }
+
+    i.empty_heart {
+        position: absolute;
+        right: 1.4%;
+        top: 12%;
+        opacity: 1;
+        font-size: 1.2rem;
+        color: #000;
+
+        &:hover {
+            opacity: 0;
         }
     }
 
@@ -147,7 +181,6 @@
 /*****BREAKPOINTS***/
 /*****TABLETS*****/
 
-
 @media only screen and (min-width: 768px) {
     html {
         font-size: 1.1rem;
@@ -168,9 +201,14 @@
             flex-wrap: wrap;
             justify-content: center;
 
-            h2,
-            hr {
+            h2 {
                 width: 100%;
+            }
+
+            hr {
+                height: 0;
+                width: 2.5rem;
+                margin-right: 94%;
             }
         }
 
@@ -187,7 +225,19 @@
 }
 
 @media only screen and (min-width: 1024px) {
-    html {
+
+    h1,
+    h2 {
         font-size: 1.4rem;
     }
+
+    .restaurant_menu {
+        .menu_part {
+            hr {
+                width: 3rem;
+                margin: 0.5% 95% 2% 0;
+            }
+        }
+    }
+
 }
