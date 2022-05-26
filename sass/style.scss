@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: auto;
+  max-width: 1440px;
+}
 
 
 /*****HEADER*****/
@@ -96,13 +100,28 @@
   display: flex;
   flex-direction: column;
 
+
   .btn_instructions {
     @include function_btn_instructions;
     position: relative;
 
+    &:hover {
+      background-color: rgba(176, 79, 221, 0.151);
+      box-shadow: 0.2rem 0.3rem 0.6rem rgb(163, 162, 162);
+
+      .btn_instructions_number {
+        color: #fff;
+      }
+
+      i {
+        color: $colour-primary;
+      }
+    }
+
     i {
       color: rgb(100, 98, 98);
       font-size: 1rem;
+
     }
 
     .mobile-icon {
@@ -162,10 +181,11 @@
         top: 5%;
         right: 5%;
         background-color: $colour-tertiary;
-        color: rgb(44, 94, 36);
-        font-size: .8rem;
-        font-weight: 600;
-        padding: .2rem .7rem;
+        color: rgb(79, 119, 72);
+        font-family: $font-primary;
+        font-size: .7rem;
+        font-weight: 500;
+        padding: .3rem .7rem;
 
       }
 
@@ -191,29 +211,59 @@
         font-size: .8rem;
         font-weight: 300;
       }
+    }
 
-      i {
-        position: absolute;
-        right: 5%;
-        bottom: 12%;
-        font-size: 1.4rem;
-        color: #000;
+    i {
+      position: absolute;
+      right: 5%;
+      bottom: 12%;
+      font-size: 1.4rem;
+      color: #000;
+
+      &:hover {
+        opacity: 0;
+      }
+    }
+
+    i.full_heart {
+      opacity: 0;
+      transform: scale(1);
+      transform-origin: bottom;
+      transition: all 300ms ease-in-out;
+
+      &:hover {
+        opacity: 1;
+        transform: scale(1.3);
+        border: 1px solid $colour-primary inset;
+        color: $colour-primary;
       }
     }
   }
 }
+
+
+
+
 
 /*****FOOTER*****/
 @import "layouts/footer";
 
 
 /*****BREAKPOINTS*****/
+/*****MINI-PHONES*****/
+@media only screen and (max-width: 340px) {
+  html {
+    font-size: .8rem;
+
+    .footer i {
+      font-size: 1.2rem;
+    }
+  }
+}
+
 /*****TABLETS*****/
 @media only screen and (min-width: 768px) {
 
-  body {
-    font-size: 2rem;
-  }
 
   .functions_instructions {
     flex-direction: row;
@@ -221,7 +271,7 @@
 
 
     .btn_instructions {
-      width: 45%;
+      width: 40%;
     }
   }
 
@@ -231,10 +281,33 @@
       flex-direction: row;
       flex-wrap: wrap;
 
-
       a {
         width: 45%;
       }
+    }
+  }
+}
+
+/*****DESKTOP*****/
+@media only screen and (min-width: 1024px) {
+
+  h1,
+  h2,
+  h3,
+  p {
+    font-size: 1.2rem;
+  }
+
+  .introduction {
+    .introduction_location p {
+      font-size: 1rem;
+    }
+  }
+
+  .functions_instructions {
+    .btn_instructions {
+      width: 35%;
+      font-size: .8rem;
     }
   }
 }
