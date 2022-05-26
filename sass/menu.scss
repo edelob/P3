@@ -12,7 +12,7 @@ body {
     max-width: 1440px;
 
     img {
-        max-width: 1440px;
+        width: 100%;
     }
 }
 
@@ -184,6 +184,10 @@ body {
 @media only screen and (min-width: 768px) {
     html {
         font-size: 1.1rem;
+
+        img {
+            width: 100%;
+        }
     }
 
     .restaurant_menu {
@@ -225,6 +229,11 @@ body {
 }
 
 @media only screen and (min-width: 1024px) {
+    body {
+        img {
+            max-width: 1440px;
+        }
+    }
 
     h1,
     h2 {

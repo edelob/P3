@@ -119,7 +119,7 @@ body {
 }
 
 body img {
-  max-width: 1440px;
+  width: 100%;
 }
 
 /*****HEADER*****/
@@ -356,6 +356,9 @@ body img {
   html {
     font-size: 1.1rem;
   }
+  html img {
+    width: 100%;
+  }
   .restaurant_menu {
     top: 300px;
   }
@@ -391,6 +394,9 @@ body img {
 }
 
 @media only screen and (min-width: 1024px) {
+  body img {
+    max-width: 1440px;
+  }
   h1,
   h2 {
     font-size: 1.4rem;
