@@ -1,0 +1,124 @@
+@-webkit-keyframes opening {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes opening {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes backgd {
+  0% {
+    opacity: 1;
+  }
+  88% {
+    border-radius: 0%;
+  }
+  90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+    border-radius: 50%;
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes backgd {
+  0% {
+    opacity: 1;
+  }
+  88% {
+    border-radius: 0%;
+  }
+  90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+    border-radius: 50%;
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  30% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  30% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.loader {
+  margin: auto;
+  height: 100vh;
+  position: fixed;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  inset: 0;
+  z-index: 1;
+  background-color: #ffffff;
+  -webkit-animation: backgd 3s linear forwards;
+          animation: backgd 3s linear forwards;
+}
+
+.loader h1 {
+  position: absolute;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
+  background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
+  font-size: 1.8rem;
+  padding: 4rem 1rem;
+  border: 0.5rem solid #99e2d0;
+  -webkit-box-shadow: .3rem .3rem 1rem grey;
+          box-shadow: .3rem .3rem 1rem grey;
+  border-radius: 50%;
+  -webkit-animation: spin 2.5s linear forwards;
+          animation: spin 2.5s linear forwards;
+}
+/*# sourceMappingURL=loader.css.map */

@@ -1,0 +1,26 @@
+/***SPIN LOADER***/
+.loader {
+    margin: auto;
+    height: 100vh;
+    position: fixed;
+    display: grid;
+    place-items: center;
+    inset: 0;
+    z-index: 1;
+    background-color: #ffffff;
+    animation: backgd 3s linear forwards;
+
+
+    h1 {
+        position: absolute;
+        background-image: linear-gradient(to bottom right,
+                #ff79da,
+                #9356dc);
+        font-size: 1.8rem;
+        padding: 4rem 1rem;
+        border: .5rem solid $colour-tertiary;
+        box-shadow: .3rem .3rem 1rem grey;
+        border-radius: 50%;
+        animation: spin 2.5s linear forwards;
+    }
+}
