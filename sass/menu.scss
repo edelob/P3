@@ -1,6 +1,7 @@
 @import "utils/reset";
 @import "utils/variables";
 @import "utils/mixins";
+@import "utils/keyframes";
 @import "base/fonts";
 
 * {
@@ -9,7 +10,6 @@
 
 body {
     margin: auto;
-    max-width: 1440px;
 
     img {
         width: 100%;
@@ -20,7 +20,7 @@ body {
 .menu_header {
     .menu_logo {
         display: flex;
-        justify-content: baseline;
+        justify-content: center;
         padding: 1rem 1rem 0.5rem 1rem;
 
         a {
@@ -40,6 +40,7 @@ body {
     img {
         object-fit: cover;
         min-height: 100px;
+        width: 100%;
         z-index: 1;
         position: absolute;
     }
@@ -63,10 +64,10 @@ body {
         i:last-of-type {
             position: absolute;
             top: 21%;
-            right: 1.7%;
+            right: 1.6%;
             opacity: 0;
-            transform: scale(1);
-            transition: all 350ms ease-in;
+            transform: scale(.7);
+            transition: all 350ms linear;
 
             &:hover {
                 opacity: 1;
@@ -90,14 +91,12 @@ body {
         opacity: 1;
         font-size: 1.2rem;
         color: #000;
-
-        &:hover {
-            opacity: 0;
-        }
     }
 
     .menu_part {
         width: 100%;
+
+
 
         h2 {
             text-transform: uppercase;
@@ -116,6 +115,27 @@ body {
             font-weight: 900;
         }
 
+    }
+
+    .starters {
+        overflow: hidden;
+        opacity: 0;
+        transition: all;
+        animation: opening .4s linear forwards;
+    }
+
+    .main {
+        overflow: hidden;
+        opacity: 0;
+        transition: all;
+        animation: opening .4s linear .2s forwards;
+    }
+
+    .desserts {
+        overflow: hidden;
+        opacity: 0;
+        transition: all;
+        animation: opening .4s linear .4s forwards;
     }
 
     .menu_item {
@@ -230,7 +250,10 @@ body {
 
 @media only screen and (min-width: 1024px) {
     body {
+        max-width: 1440px;
+
         img {
+            width: 100%;
             max-width: 1440px;
         }
     }

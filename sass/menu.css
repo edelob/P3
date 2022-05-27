@@ -79,6 +79,102 @@ th {
   padding: 0;
 }
 
+@-webkit-keyframes opening {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes opening {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes backgd {
+  0% {
+    opacity: 1;
+  }
+  88% {
+    border-radius: 0%;
+  }
+  90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+    border-radius: 50%;
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes backgd {
+  0% {
+    opacity: 1;
+  }
+  88% {
+    border-radius: 0%;
+  }
+  90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+    border-radius: 50%;
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  30% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  30% {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 p {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
@@ -115,7 +211,6 @@ h3 {
 
 body {
   margin: auto;
-  max-width: 1440px;
 }
 
 body img {
@@ -127,9 +222,9 @@ body img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: baseline;
-      -ms-flex-pack: baseline;
-          justify-content: baseline;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 1rem 1rem 0.5rem 1rem;
 }
 
@@ -148,6 +243,7 @@ body img {
   -o-object-fit: cover;
      object-fit: cover;
   min-height: 100px;
+  width: 100%;
   z-index: 1;
   position: absolute;
 }
@@ -172,12 +268,12 @@ body img {
 .restaurant_menu .restaurant_heading i:last-of-type {
   position: absolute;
   top: 21%;
-  right: 1.7%;
+  right: 1.6%;
   opacity: 0;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: all 350ms ease-in;
-  transition: all 350ms ease-in;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  -webkit-transition: all 350ms linear;
+  transition: all 350ms linear;
 }
 
 .restaurant_menu .restaurant_heading i:last-of-type:hover {
@@ -203,10 +299,6 @@ body img {
   color: #000;
 }
 
-.restaurant_menu i.empty_heart:hover {
-  opacity: 0;
-}
-
 .restaurant_menu .menu_part {
   width: 100%;
 }
@@ -229,6 +321,33 @@ body img {
 .restaurant_menu .menu_part p {
   font-size: .7rem;
   font-weight: 900;
+}
+
+.restaurant_menu .starters {
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: all;
+  transition: all;
+  -webkit-animation: opening .4s linear forwards;
+          animation: opening .4s linear forwards;
+}
+
+.restaurant_menu .main {
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: all;
+  transition: all;
+  -webkit-animation: opening .4s linear .2s forwards;
+          animation: opening .4s linear .2s forwards;
+}
+
+.restaurant_menu .desserts {
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: all;
+  transition: all;
+  -webkit-animation: opening .4s linear .4s forwards;
+          animation: opening .4s linear .4s forwards;
 }
 
 .restaurant_menu .menu_item {
@@ -394,7 +513,11 @@ body img {
 }
 
 @media only screen and (min-width: 1024px) {
+  body {
+    max-width: 1440px;
+  }
   body img {
+    width: 100%;
     max-width: 1440px;
   }
   h1,
