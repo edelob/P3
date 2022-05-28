@@ -175,6 +175,28 @@ th {
   }
 }
 
+@-webkit-keyframes slide {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slide {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
 p {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
@@ -396,12 +418,12 @@ body img {
   font-weight: 400;
 }
 
-.restaurant_menu .order_btn {
+.order_btn {
   text-align: center;
   margin-top: 2.3rem;
 }
 
-.restaurant_menu .order_btn .button {
+.order_btn .button {
   width: 65%;
   background-image: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
@@ -418,7 +440,7 @@ body img {
   font-size: .8rem;
 }
 
-.restaurant_menu .order_btn .button:hover {
+.order_btn .button:hover {
   opacity: .8;
   -webkit-box-shadow: 0.4rem 0.5rem 0.8rem #a3a2a2;
           box-shadow: 0.4rem 0.5rem 0.8rem #a3a2a2;

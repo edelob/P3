@@ -167,23 +167,24 @@ body {
 
         .menu_item_price {
             padding: 1.2rem 0 0 0;
-            font-weight: 400
+            font-weight: 400;
         }
     }
-
-    .order_btn {
-        text-align: center;
-        margin-top: 2.3rem;
-
-        .button {
-            @include btn-purple;
-            width: 55%;
-            font-size: .8rem;
-        }
-    }
-
-
 }
+
+.order_btn {
+    text-align: center;
+    margin-top: 2.3rem;
+
+    .button {
+        @include btn-purple;
+        width: 55%;
+        font-size: .8rem;
+    }
+}
+
+
+
 
 
 
