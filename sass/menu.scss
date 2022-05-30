@@ -31,7 +31,7 @@ body {
 
         img {
             margin: auto;
-            width: 45%;
+            width: 48%;
         }
     }
 }
@@ -39,9 +39,8 @@ body {
 .restaurant_img {
     img {
         object-fit: cover;
-        min-height: 100px;
+        min-height: 330px;
         width: 100%;
-        z-index: 1;
         position: absolute;
     }
 }
@@ -49,11 +48,11 @@ body {
 .restaurant_menu {
     background-color: $colour-grey-dark;
     border-radius: 1.8rem 1.8rem 0 0;
-    padding: 1.4rem 1rem 3rem 1rem;
+    padding: 1.8rem 1rem 5.5rem 1rem;
     width: 100%;
     z-index: 2;
     position: relative;
-    top: 180px;
+    top: 220px;
 
 
 
@@ -63,15 +62,15 @@ body {
 
         i:last-of-type {
             position: absolute;
-            top: 21%;
-            right: 1.6%;
+            top: 28%;
+            right: 1.7%;
             opacity: 0;
             transform: scale(.7);
-            transition: all 350ms linear;
+            transition: all 300ms linear;
 
             &:hover {
                 opacity: 1;
-                transform: scale(1.7);
+                transform: scale(2);
                 color: $colour-primary;
             }
         }
@@ -79,7 +78,6 @@ body {
 
     h1 {
         font-family: $font-heading;
-        font-size: 1.3rem;
         font-weight: 500;
         margin-right: auto;
     }
@@ -87,22 +85,19 @@ body {
     i.empty_heart {
         position: absolute;
         right: 1.4%;
-        top: 12%;
+        top: 25%;
         opacity: 1;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         color: #000;
     }
 
     .menu_part {
         width: 100%;
 
-
-
         h2 {
             text-transform: uppercase;
-            font-size: .9rem;
             font-weight: 400;
-            margin-top: 1.5rem;
+            margin-top: 1.8rem;
         }
 
         hr {
@@ -111,7 +106,7 @@ body {
         }
 
         p {
-            font-size: .7rem;
+            font-size: .9rem;
             font-weight: 900;
         }
 
@@ -141,45 +136,78 @@ body {
     .menu_item {
         display: flex;
         justify-content: space-between;
+        overflow: hidden;
         background-color: #fff;
-        margin: .7rem 0;
-        border-radius: .6rem;
-        padding: .5rem;
+        margin: 1rem 0;
+        border-radius: .8rem;
+        padding-left: .8rem;
         box-shadow: .3rem .2rem .5rem rgb(212, 211, 211);
 
 
         .menu_text {
             @include text_ellipsis;
+            width: 100%;
 
             h3 {
                 @include text_ellipsis;
-                font-size: .9rem;
                 font-weight: 500;
-                padding: .1rem 0;
+                padding: .8rem 0 .4rem 0;
             }
 
             p {
                 @include text_ellipsis;
-                font-size: .7rem;
+                padding-bottom: .6rem;
                 font-weight: 300;
+            }
+
+            &:hover+.price_check {
+                transition-duration: 550ms;
+                transform: translateX(0);
+            }
+
+            &:hover+.price_check i {
+                transition-duration: 550ms;
+                transition-delay: 200ms;
+                transform: rotate(0deg);
             }
         }
 
-        .menu_item_price {
-            padding: 1.2rem 0 0 0;
-            font-weight: 400;
+        .price_check {
+            display: flex;
+            justify-content: space-between;
+            transform: translateX(60%);
+
+            .menu_item_price {
+                padding: 2.5rem 1.8rem 0 0;
+                font-weight: 500;
+            }
+
+            .icon_check {
+                display: grid;
+                align-items: center;
+                justify-items: center;
+                min-width: 3.5rem;
+                background-color: #99e2d0;
+                border-radius: 0 .6rem .6rem 0;
+
+                i {
+                    color: #fff;
+                    font-size: 1.2rem;
+                    transform: rotate(180deg);
+                }
+            }
         }
     }
 }
 
 .order_btn {
     text-align: center;
-    margin-top: 2.3rem;
+    margin-top: 2rem;
 
     .button {
         @include btn-purple;
         width: 55%;
-        font-size: .8rem;
+        font-size: 1rem;
     }
 }
 
@@ -196,19 +224,72 @@ body {
 .footer {
     position: relative;
     z-index: 2;
-    top: 180px;
+    top: 220px;
 }
 
 /*****BREAKPOINTS***/
 /*****TABLETS*****/
+@media only screen and (max-width: 375px) {
+    .restaurant_menu {
+        .menu_item {
+            .menu_text {
+                &:hover {
+                    transition-delay: 200ms;
+                    width: 60%;
+                }
+
+            }
+
+            .price_check {
+                width: 35%;
+
+                .menu_item_price {
+                    width: 20%;
+                }
+            }
+        }
+
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        h2 {
+            font-size: 1rem;
+        }
+
+        h3 {
+            font-size: 1rem;
+        }
+
+        p {
+            font-size: .8rem;
+        }
+    }
+}
+
+@media only screen and (width: 768px) {
+    .restaurant_menu {
+        .menu_item {
+            .menu_text {
+                &:hover {
+                    transition-delay: 200ms;
+                    width: 60%;
+                }
+
+            }
+        }
+    }
+}
+
 
 @media only screen and (min-width: 768px) {
     html {
-        font-size: 1.1rem;
+        font-size: 1rem;
 
         img {
             width: 100%;
         }
+
     }
 
     .restaurant_menu {
@@ -233,12 +314,12 @@ body {
             hr {
                 height: 0;
                 width: 2.5rem;
-                margin-right: 94%;
+                margin-right: 95%;
             }
         }
 
         .menu_item {
-            min-width: 46%;
+            width: 45%;
             margin: .3rem;
         }
 
@@ -267,10 +348,12 @@ body {
     .restaurant_menu {
         .menu_part {
             hr {
-                width: 3rem;
-                margin: 0.5% 95% 2% 0;
+                width: 8rem;
+                margin: 0.5% 96% 2% 0;
             }
         }
     }
 
 }
+
+/*****END***/
