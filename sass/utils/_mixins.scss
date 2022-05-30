@@ -12,14 +12,14 @@
 }
 
 @mixin btn-purple {
-  width: 65%;
+  width: 60%;
   background-image: linear-gradient(to bottom right,
       $colour-secondary,
       $colour-primary);
-  font-size: .7rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #fff;
-  padding: .8rem 0rem;
+  padding: 1rem 0rem;
   margin: auto;
   border-radius: 1.7rem;
   border: none;
@@ -37,19 +37,19 @@
   justify-content: space-evenly;
   align-items: center;
   background-color: $colour-grey;
-  margin: .6rem auto;
-  padding: 1.4rem 1.6rem 1rem 0;
+  margin: .8rem auto;
+  padding: 1.6rem 1.6rem 1.6rem 0;
   width: 85%;
   border: none;
   border-radius: 1.2rem;
-  box-shadow: 0.2rem 0.2rem 0.6rem rgb(212, 211, 211);
+  box-shadow: 0.2rem 0.2rem 1rem rgb(212, 211, 211);
   font-family: $font-primary;
   font-size: .8rem;
   font-weight: 500;
 }
 
 @mixin hr-green {
-  width: 2rem;
+  width: 3rem;
   color: rgb(6, 94, 6);
   border-style: inset;
   border: 1px solid $colour-tertiary;
