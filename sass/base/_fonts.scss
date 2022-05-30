@@ -6,27 +6,28 @@ sans-serif;
 $font-heading: "Shrikhand",
 cursive;
 
-p {
-  font-family: $font-primary;
-  font-size: 1rem;
-  font-weight: 400;
-}
 
 h1 {
   font-family: $font-primary;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.8rem;
 }
 
 h2 {
   font-family: $font-primary;
-  font-weight: 700;
-  font-size: 1rem;
+  font-weight: 100;
+  font-size: 1.2rem;
 }
 
 h3 {
   font-family: $font-primary;
+  font-size: 1.1rem;
+}
+
+p {
+  font-family: $font-primary;
   font-size: 1rem;
+  font-weight: 400;
 }
 
 .heading {
