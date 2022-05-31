@@ -45,3 +45,22 @@
         transform: rotate(360deg);
     }
 }
+
+@keyframes heart {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+        color: $colour-primary;
+    }
+
+    50% {
+        transform: scale(3);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.6);
+        opacity: 1;
+        color: $colour-primary;
+    }
+}
