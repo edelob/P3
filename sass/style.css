@@ -175,6 +175,46 @@ th {
   }
 }
 
+@-webkit-keyframes heart {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+    color: #9356dc;
+  }
+  50% {
+    -webkit-transform: scale(3);
+            transform: scale(3);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    opacity: 1;
+    color: #9356dc;
+  }
+}
+
+@keyframes heart {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+    color: #9356dc;
+  }
+  50% {
+    -webkit-transform: scale(3);
+            transform: scale(3);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    opacity: 1;
+    color: #9356dc;
+  }
+}
+
 h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -513,18 +553,17 @@ body {
 
 .restaurants .restaurants_select i.full_heart {
   opacity: 0;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
+  /** transform: scale(1);
+      transition: all 300ms ease-in-out;**/
 }
 
 .restaurants .restaurants_select i.full_heart:hover {
-  opacity: 1;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-  border: none;
-  color: #9356dc;
+  /** opacity: 1;
+        transform: scale(1.5);
+        border: none;
+        color: $colour-primary;**/
+  -webkit-animation: heart 500ms ease-out forwards;
+          animation: heart 500ms ease-out forwards;
 }
 
 /*****FOOTER*****/
