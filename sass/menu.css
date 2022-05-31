@@ -188,8 +188,8 @@ th {
     opacity: 1;
   }
   100% {
-    -webkit-transform: scale(1.8);
-            transform: scale(1.8);
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
     opacity: 1;
     color: #9356dc;
   }
@@ -208,8 +208,8 @@ th {
     opacity: 1;
   }
   100% {
-    -webkit-transform: scale(1.8);
-            transform: scale(1.8);
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
     opacity: 1;
     color: #9356dc;
   }
@@ -649,7 +649,7 @@ body img {
     -webkit-animation: heart 500ms ease-out forwards;
             animation: heart 500ms ease-out forwards;
   }
-  .restaurant_menu .restaurant_heading i:last-of-type .menu_part hr {
+  .restaurant_menu .menu_part hr {
     width: 8rem;
     margin: 0.5% 96% 2% 0;
   }

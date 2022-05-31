@@ -354,13 +354,13 @@ body {
                 &:hover {
                     animation: heart 500ms ease-out forwards;
                 }
+            }
+        }
 
-                .menu_part {
-                    hr {
-                        width: 8rem;
-                        margin: 0.5% 96% 2% 0;
-                    }
-                }
+        .menu_part {
+            hr {
+                width: 8rem;
+                margin: 0.5% 96% 2% 0;
             }
         }
     }
