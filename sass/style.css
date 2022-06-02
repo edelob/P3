@@ -82,26 +82,32 @@ th {
 @-webkit-keyframes opening {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
+  }
+  85% {
+    opacity: .5;
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
 @keyframes opening {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    -webkit-transform: translateY(-2rem);
+            transform: translateY(-2rem);
+  }
+  85% {
+    opacity: .5;
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
@@ -177,41 +183,35 @@ th {
 
 @-webkit-keyframes heart {
   0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-    color: #9356dc;
+    opacity: .3;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
   50% {
-    -webkit-transform: scale(3);
-            transform: scale(3);
-    opacity: 1;
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
   }
   100% {
-    -webkit-transform: scale(1.6);
-            transform: scale(1.6);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
     opacity: 1;
-    color: #9356dc;
   }
 }
 
 @keyframes heart {
   0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-    color: #9356dc;
+    opacity: .3;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
   50% {
-    -webkit-transform: scale(3);
-            transform: scale(3);
-    opacity: 1;
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
   }
   100% {
-    -webkit-transform: scale(1.6);
-            transform: scale(1.6);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
     opacity: 1;
-    color: #9356dc;
   }
 }
 
@@ -378,6 +378,7 @@ body {
   opacity: .8;
   -webkit-box-shadow: 0.4rem 0.5rem 0.8rem #a3a2a2;
           box-shadow: 0.4rem 0.5rem 0.8rem #a3a2a2;
+  cursor: pointer;
 }
 
 /*****APP FUNCTIONS*****/
@@ -437,6 +438,7 @@ body {
   background-color: rgba(176, 79, 221, 0.151);
   -webkit-box-shadow: 0.2rem 0.3rem 0.6rem #a3a2a2;
           box-shadow: 0.2rem 0.3rem 0.6rem #a3a2a2;
+  cursor: pointer;
 }
 
 .functions_instructions .btn_instructions:hover .btn_instructions_number {
@@ -518,6 +520,7 @@ body {
   right: 5%;
   background-color: #99e2d0;
   color: #4f7748;
+  border-radius: .2rem;
   font-family: "Roboto", sans-serif;
   font-size: .9rem;
   font-weight: 500;
@@ -553,17 +556,24 @@ body {
 
 .restaurants .restaurants_select i.full_heart {
   opacity: 0;
-  /** transform: scale(1);
-      transition: all 300ms ease-in-out;**/
+  right: 4.5%;
+  bottom: 11.5%;
+  -webkit-transition: all;
+  transition: all;
 }
 
 .restaurants .restaurants_select i.full_heart:hover {
-  /** opacity: 1;
-        transform: scale(1.5);
-        border: none;
-        color: $colour-primary;**/
   -webkit-animation: heart 500ms ease-out forwards;
-          animation: heart 500ms ease-out forwards;
+  animation: heart 500ms ease-out forwards;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(#ff79da, #9356dc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-size: 1.6rem;
+  opacity: 1;
+  cursor: pointer;
 }
 
 /*****FOOTER*****/
