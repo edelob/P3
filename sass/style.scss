@@ -224,25 +224,18 @@ body {
       bottom: 12%;
       font-size: 1.4rem;
       color: #000;
-    }
 
-    i.full_heart {
-      opacity: 0;
-      right: 4.5%;
-      bottom: 11.5%;
-      transition: all;
-
-      &:hover {
-        -webkit-animation: heart 500ms ease-out forwards;
-        animation: heart 500ms ease-out forwards;
+      &:hover:after {
+        font-family: 'Material Icons';
+        content: "\e87d";
+        position: absolute;
+        top: 1%;
+        left: 2%;
         background: linear-gradient($colour-secondary, $colour-primary);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-weight: bold;
-        font-size: 1.6rem;
-        opacity: 1;
-        cursor: pointer;
+        animation: heart 500ms ease-out forwards;
       }
     }
   }

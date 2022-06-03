@@ -184,16 +184,16 @@ th {
 @-webkit-keyframes heart {
   0% {
     opacity: .3;
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   50% {
-    -webkit-transform: scale(1.3);
-            transform: scale(1.3);
+    -webkit-transform: scale(2);
+            transform: scale(2);
   }
   100% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
     opacity: 1;
   }
 }
@@ -201,16 +201,16 @@ th {
 @keyframes heart {
   0% {
     opacity: .3;
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   50% {
-    -webkit-transform: scale(1.3);
-            transform: scale(1.3);
+    -webkit-transform: scale(2);
+            transform: scale(2);
   }
   100% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
     opacity: 1;
   }
 }
@@ -554,26 +554,19 @@ body {
   color: #000;
 }
 
-.restaurants .restaurants_select i.full_heart {
-  opacity: 0;
-  right: 4.5%;
-  bottom: 11.5%;
-  -webkit-transition: all;
-  transition: all;
-}
-
-.restaurants .restaurants_select i.full_heart:hover {
-  -webkit-animation: heart 500ms ease-out forwards;
-  animation: heart 500ms ease-out forwards;
+.restaurants .restaurants_select i:hover:after {
+  font-family: 'Material Icons';
+  content: "\e87d";
+  position: absolute;
+  top: 1%;
+  left: 2%;
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background: linear-gradient(#ff79da, #9356dc);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: bold;
-  font-size: 1.6rem;
-  opacity: 1;
-  cursor: pointer;
+  -webkit-animation: heart 500ms ease-out forwards;
+          animation: heart 500ms ease-out forwards;
 }
 
 /*****FOOTER*****/
