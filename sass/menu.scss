@@ -63,29 +63,6 @@ body {
         display: flex;
         position: relative;
 
-        /**Hidden heart appear pink on hover**/
-        i:last-of-type {
-            position: absolute;
-            top: 22%;
-            right: 1.3%;
-            opacity: 0;
-            transition: all;
-
-            &:hover {
-                -webkit-animation: heart 500ms ease-out forwards;
-                animation: heart 500ms ease-out forwards;
-                background: linear-gradient($colour-secondary, $colour-primary);
-                -webkit-background-clip: text;
-                background-clip:
-                    text;
-                -webkit-text-fill-color: transparent;
-                font-weight: bold;
-                font-size: 1.6rem;
-                opacity: 1;
-                cursor: pointer;
-            }
-        }
-
         h1 {
             font-family: $font-heading;
             font-size: 1.8rem;
@@ -100,6 +77,20 @@ body {
             opacity: 1;
             font-size: 1.4rem;
             color: #000;
+
+
+            &:hover:after {
+                font-family: 'Material Icons';
+                content: "\e87d";
+                position: absolute;
+                top: 1%;
+                left: 2%;
+                background: linear-gradient($colour-secondary, $colour-primary);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: heart 600ms ease-out forwards;
+            }
         }
     }
 
@@ -289,21 +280,24 @@ body {
 /*****************BREAKPOINTS****************/
 @media only screen and (max-width: 375px) {
     .restaurant_menu {
+        .restaurant_heading {
 
-        h1 {
-            font-size: 1.5rem;
+            h1 {
+                font-size: 1.6rem;
+            }
         }
 
-        h2 {
-            font-size: 1rem;
-        }
+        .menu_item {
+            .menu_text {
 
-        h3 {
-            font-size: 1rem;
-        }
+                h3 {
+                    font-size: 1.1rem;
+                }
 
-        p {
-            font-size: .8rem;
+                p {
+                    font-size: 1rem;
+                }
+            }
         }
     }
 }
