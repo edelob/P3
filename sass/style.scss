@@ -192,7 +192,7 @@ body {
         font-family: $font-primary;
         font-size: .9rem;
         font-weight: 500;
-        padding: .4rem .7rem;
+        padding: .4rem .7rem .3rem;
 
       }
 
@@ -221,17 +221,17 @@ body {
     i {
       position: absolute;
       right: 5%;
-      bottom: 12%;
-      font-size: 1.4rem;
+      bottom: 10%;
+      font-size: 28px;
       color: #000;
 
       &:hover:after {
         font-family: 'Material Icons';
         content: "\e87d";
         position: absolute;
-        top: 1%;
-        left: 2%;
-        background: linear-gradient($colour-secondary, $colour-primary);
+        top: 0;
+        left: 0;
+        background: linear-gradient($colour-primary, $colour-secondary);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -252,14 +252,20 @@ body {
 /*****BREAKPOINTS*****/
 /*****MINI-PHONES*****/
 @media only screen and (max-width: 340px) {
-  html {
-    font-size: .8rem;
+  .restaurants {
+    .restaurants_select {
+      .restaurant_card {
+        font-size: 2px;
 
-    .footer i {
-      font-size: 1.2rem;
+      }
     }
   }
+
+  .footer i {
+    font-size: 1.2rem;
+  }
 }
+
 
 /*****TABLETS*****/
 @media only screen and (min-width: 768px) {
