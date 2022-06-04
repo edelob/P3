@@ -192,8 +192,8 @@ th {
             transform: scale(1.5);
   }
   100% {
-    -webkit-transform: scale(1.3);
-            transform: scale(1.3);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
     opacity: 1;
   }
 }
@@ -209,8 +209,8 @@ th {
             transform: scale(1.5);
   }
   100% {
-    -webkit-transform: scale(1.3);
-            transform: scale(1.3);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
     opacity: 1;
   }
 }
@@ -631,8 +631,11 @@ body {
 /*****BREAKPOINTS*****/
 /*****MINI-PHONES*****/
 @media only screen and (max-width: 340px) {
-  .restaurants .restaurants_select .restaurant_card {
-    font-size: 2px;
+  .introduction .introduction_btn .btn {
+    font-size: .8rem;
+  }
+  .functions_instructions .btn_instructions {
+    font-size: .7rem;
   }
   .footer i {
     font-size: 1.2rem;

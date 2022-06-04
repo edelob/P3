@@ -252,12 +252,17 @@ body {
 /*****BREAKPOINTS*****/
 /*****MINI-PHONES*****/
 @media only screen and (max-width: 340px) {
-  .restaurants {
-    .restaurants_select {
-      .restaurant_card {
-        font-size: 2px;
-
+  .introduction {
+    .introduction_btn {
+      .btn {
+        font-size: .8rem;
       }
+    }
+  }
+
+  .functions_instructions {
+    .btn_instructions {
+      font-size: .7rem;
     }
   }
 
