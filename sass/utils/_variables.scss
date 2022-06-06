@@ -1,7 +1,15 @@
+//Color values
 $colour-primary: #9356dc;
 $colour-secondary: #ff79da;
 $colour-tertiary: #99e2d0;
+//Background
 $colour-grey: #f8f6f6;
 $colour-grey-dark: rgb(240, 236, 236);
+//Footer
 $colour-footer-background: rgb(53, 52, 52);
 $colour-footer-links: #fff;
+
+//Loop menu animation values
+$it_nb: 6; //max item_number
+$anim_dur: 200ms; //animation duration
+$anim_del: 150ms; //animation delay
