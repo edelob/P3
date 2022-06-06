@@ -107,81 +107,58 @@ body {
 
         hr {
             @include hr-green;
-
-        }
-
-        /**price font-size**/
-        p {
-            font-size: .9rem;
-            font-weight: 900;
-        }
-
-    }
-
-    /*****MENU PAGE OPENING ANIMATION*****/
-    .starters {
-        .menu_item {
-            overflow: hidden;
-            opacity: 0;
-
-            &:nth-child(3) {
-                animation: opening 200ms ease forwards;
-            }
-
-            &:nth-child(4) {
-                animation: opening 200ms ease 150ms forwards;
-            }
-
-            &:nth-child(5) {
-                animation: opening 200ms ease 300ms forwards;
-            }
-
-            &:nth-child(6) {
-                animation: opening 200ms ease 450ms forwards;
-            }
-
         }
     }
 
+    /*MENU PAGE OPENING ANIMATION */
+    /* get variables values in utils/_variables.scss */
+    /* there are max 4 dishes in a menu for now
+    count begins from 3 in @for loop because of h2 and hr element before first menu_item, so max item number=4=($it_nb - 2)
+    animation-duration: $anim_dur;
+    animation-delay: $anim_del*($i - 1) --> no delay for the first one*/
+
+    .starters .menu_item {
+        overflow: hidden;
+        opacity: 0;
+
+        @for $i from 3 through $it_nb {
+            &:nth-child(#{$i}) {
+                animation: opening $anim_dur ease-out forwards;
+                animation-delay: $anim_del*($i - 1);
+            }
+        }
+    }
+
+    /* MAIN: animation-delay --> need to add .starters duration: $anim_dur*($it_nb - 3) --> should be ($it_nb - 2) because of h2+hr but next animation begins with opacity: 0; and add a visual delay, so next one needs to be started earlier */
     .main {
         .menu_item {
             overflow: hidden;
             opacity: 0;
 
-            &:nth-child(3) {
-                animation: opening 200ms ease 600ms forwards;
-            }
-
-            &:nth-child(4) {
-                animation: opening 200ms ease 750ms forwards;
-            }
-
-            &:nth-child(5) {
-                animation: opening 200ms ease 900ms forwards;
+            @for $i from 3 through $it_nb {
+                &:nth-child(#{$i}) {
+                    animation: opening $anim_dur ease-out forwards;
+                    animation-delay: $anim_del*($i - 1)+($it_nb - 3)*$anim_dur;
+                }
             }
         }
     }
 
+    /* DESSERTS: animation-delay --> add .starters + .main duration: 2*($it_nb - 3)*$anim_dur */
     .desserts {
         .menu_item {
             overflow: hidden;
             opacity: 0;
 
-            &:nth-child(3) {
-                animation: opening 200ms ease 1050ms forwards;
-            }
-
-            &:nth-child(4) {
-                animation: opening 200ms ease 1200ms forwards;
-            }
-
-            &:nth-child(5) {
-                animation: opening 200ms ease 1350ms forwards;
+            @for $i from 3 through $it_nb {
+                &:nth-child(#{$i}) {
+                    animation: opening $anim_dur ease-out forwards;
+                    animation-delay: $anim_del*($i - 1)+2*($it_nb - 3)*$anim_dur;
+                }
             }
         }
     }
 
-    /****************DISHES*****************/
 
     .menu_item {
         display: flex;
@@ -195,6 +172,7 @@ body {
         overflow: hidden;
         cursor: pointer;
 
+
         /*****Dish select hover animation*****/
         &:hover .price_check .icon_check {
             transition-duration: 550ms;
@@ -206,7 +184,6 @@ body {
             transition-delay: 150ms;
             transform: rotate(0deg);
         }
-
 
 
         .menu_text {
@@ -228,6 +205,12 @@ body {
 
         }
 
+        //price font-size
+        p {
+            font-size: .9rem;
+            font-weight: 900;
+        }
+
         .price_check {
             display: flex;
             margin-left: .5rem;
@@ -237,6 +220,7 @@ body {
                 font-weight: 500;
             }
 
+            //visible while animated
             .icon_check {
                 display: grid;
                 align-items: center;
@@ -248,12 +232,14 @@ body {
                 i {
                     color: #fff;
                     font-size: 1.2rem;
-                    transform: rotate(180deg);
+                    transform: rotate(-180deg);
                 }
             }
         }
     }
 }
+
+
 
 
 .order_btn {
