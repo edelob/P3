@@ -1,3 +1,5 @@
+//Menu page animation
+
 @keyframes opening {
     0% {
         opacity: 0;
@@ -16,6 +18,7 @@
 
 }
 
+//Spin loader
 
 @keyframes backgd {
     0% {
@@ -52,6 +55,8 @@
         transform: rotate(360deg);
     }
 }
+
+//Heart animation 
 
 @keyframes heart {
     0% {
