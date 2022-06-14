@@ -13,6 +13,7 @@
 
 @mixin btn-purple {
   width: 60%;
+  max-width: 300px;
   background-image: linear-gradient(to bottom right,
       $colour-secondary,
       $colour-primary);
