@@ -282,6 +282,7 @@ body {
 .homepage .logo img {
   margin: auto;
   width: 50%;
+  max-width: 400px;
 }
 
 /*****OHMYFOOD INTRODUCTION*****/
@@ -378,6 +379,7 @@ body {
 
 .introduction .introduction_btn .btn {
   width: 60%;
+  max-width: 300px;
   background-image: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
   font-size: 1rem;
@@ -681,7 +683,7 @@ body {
   }
   .functions_instructions .btn_instructions {
     width: 35%;
-    font-size: .8rem;
+    font-size: 1.1rem;
   }
 }
 

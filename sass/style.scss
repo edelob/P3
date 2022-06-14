@@ -24,6 +24,7 @@ body {
     img {
       margin: auto;
       width: 50%;
+      max-width: 400px;
     }
   }
 }
@@ -313,7 +314,7 @@ body {
   .functions_instructions {
     .btn_instructions {
       width: 35%;
-      font-size: .8rem;
+      font-size: 1.1rem;
     }
   }
 }
